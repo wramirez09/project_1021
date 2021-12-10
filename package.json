@@ -1,0 +1,19 @@
+{
+  "name": "project-1021",
+  "version": "1.0.0",
+  "description": "storeFrontSite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wramirez09/project_1021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wramirez09/project_1021/issues"
+  },
+  "homepage": "https://github.com/wramirez09/project_1021#readme"
+}
