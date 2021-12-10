@@ -69,14 +69,15 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
       <GridContainer>        
-      <GridItem xs={6} spacing={0} style={{padding:"20px"}}>
-
+      <GridItem xs={6} spacing={0} >
+        <div style={{padding:"50px"}}>
         <h1>WHO WE ARE</h1>
         <h2>ARTISTS AND ENTREPRENEURS</h2>
 
         <p>Located in the heart of Chicago, PROJECT 1021 is a Locally Owned Artist Incubator /Retail Shop in Pilsen that provides Proper Services for Artist and Small Businesses.  Founded During the 2020 Pandemic, By Local Artist Carlos Rodriguez (Charlie Glitch ) and Like minded entrepreneurs Camilo Rodriguez, Walter Rodriguez and Xavier Hernandez, a creative space and home for all artist was built.</p>
 
         <p>We do everything in house and DIY!  Custom Clothing to Website Development, Music Production and Dj Classes to Marketing and Graphic Design.  For Artists By Artists!</p>
+        </div>
       </GridItem>
         <GridItem xs={6}><img style={{width:"100%", height:"auto"}} src={logo}></img></GridItem>
         </GridContainer>
