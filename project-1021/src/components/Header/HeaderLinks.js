@@ -59,6 +59,23 @@ export default function HeaderLinks(props) {
           <CloudDownload className={classes.icons} /> Download
         </Button>
       </ListItem> */}
+       <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-tooltip"
+          title="Follow us on instagram"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="primary"
+            href="https://project1021.bigcartel.com/products"
+            style={{marginRight:"50px"}}
+          >
+            Online Store
+            {/* <i className={classes.socialIcons + " fab fa-instagram"} /> */}
+          </Button>
+        </Tooltip>
+      </ListItem>
       <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
           <IconButton aria-label="Delete">
