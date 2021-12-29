@@ -33,7 +33,7 @@ import { grayColor } from "assets/jss/material-kit-react.js";
 import logo from './../../assets/img/logo.webp';
 import tshirt from './../../assets/img/tshirt.webp';
 import { Phone } from "@material-ui/icons";
-
+import video from "../../assets/video/master.mp4"
 
 const useStyles = makeStyles(styles);
 
@@ -56,15 +56,15 @@ export default function Components(props) {
       />
       <Parallax>
         <div className={classes.container}>
-        <video width="100%" height="90%" controls style={{position:"absolute", left:"0", right:"0", margin:"0 auto", top:"0"}}>
-        <source src="movie.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <video width="100%" autoPlay muted style={{position:"absolute", left:"0", right:"0", margin:"0 auto", top:"0"}}>
+        <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 style={{color:"white", fontWeight:"800", textAlign:"center"}}>WELCOME TO<br/> PROJECT 1021</h1>
-                <p style={{textAlign:"center"}}>ARTIST INCUBATOR-RETAIL SHOP-CREATIVE SPACE</p>
+                {/* <h1 style={{color:"white", fontWeight:"800", textAlign:"center"}}>WELCOME TO<br/> PROJECT 1021</h1>
+                <p style={{textAlign:"center"}}>ARTIST INCUBATOR-RETAIL SHOP-CREATIVE SPACE</p> */}
                
               </div>
             </GridItem>
@@ -74,8 +74,15 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-      <GridContainer>        
-      <GridItem xs={12} md={6} spacing={0} >
+      <GridContainer>
+      <GridItem xs={12}>
+        <img src={tshirt} width={"100%"} height={"auto"} className="hidden-small"/>
+        <div style={{width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", color: "white"}} className="desktop-vert-center">
+          <h1>Online Store Open</h1>
+          <Button color="primary">Enter Store</Button>
+        </div> 
+      </GridItem>        
+      <GridItem xs={12} md={6}>
         <div style={{padding:"50px"}}>
           <h1>WHO WE ARE</h1>
           <h2>ARTISTS AND ENTREPRENEURS</h2>
@@ -85,22 +92,35 @@ export default function Components(props) {
           <p>We do everything in house and DIY!  Custom Clothing to Website Development, Music Production and Dj Classes to Marketing and Graphic Design.  For Artists By Artists!</p>
         </div>
       </GridItem>
-        <GridItem xs={12} md={6}>
-          <div style={{display:"flex", alignItems:"center", flexDirection:"row", justifyContent:"center",width:"100%", height:"100%", background:"#000"}}>
-          <img style={{width:"35%", height:"auto"}} src={logo}></img>
-          </div>
-          </GridItem>
-
-          <GridItem xs={12} md={6} style={{background:`url(${tshirt})`, backgroundSize:"contain"}}>
-          
-          {/* <img style={{width:"100%", height:"auto"}} src={tshirt}></img> */}
-          <div style={{position:"absolute", width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", color: "white"}}>
+      <GridItem xs={12} md={6}>
+        <div style={{display:"flex", alignItems:"center", flexDirection:"row", justifyContent:"center",width:"100%", height:"100%", background:"#000"}}>
+        <img style={{width:"35%", height:"auto"}} src={logo}></img>
+        </div>
+      </GridItem>
+      <GridItem xs={12}>
+        <img src={tshirt} width={"100%"} height={"auto"} style={{transform:"rotate(180deg)"}} className="hidden-small"/>
+        <div style={{width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", color: "white"}} className="desktop-vert-center">
             <h2>Come Visit</h2>
+            <p style={{fontWeight:"800"}}>1021 W 18th St,<br/> Chicago, IL 60608</p>
+            <p>INSTORE HOURS</p>
+          <p>Wednesday - Saturday :: 3pm - 9pm</p>
+          <p>Sunday-Tuesday :: Appointment Only</p>
+          <div>
+          <a href="" style={{display:"flex", alignItems:"center", marginBottom:"20px"}}><Phone></Phone>&nbsp;(312) 609-9970</a>
+          </div>
+        </div> 
+      </GridItem> 
+
+          {/* <GridItem xs={12} style={{background:`url(${tshirt}) no-repeat`, backgroundSize:"contain", backgroundPosition:"center", height:"200px"}}>
+           */}
+          {/* <img style={{width:"100%", height:"auto"}} src={tshirt}></img> */}
+          {/* <div style={{position:"absolute", width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", color: "white"}}>
+            <p>Come Visit</h2>
             <p style={{fontWeight:"800"}}>1021 W 18th St, Chicago, IL 60608</p>
             <a href="#">Directions</a>
-          </div>
-          </GridItem>
-          <GridItem xs={12} md={6}>
+          </div> */}
+          {/* </GridItem> */}
+          {/* <GridItem xs={12} md={6}>
           <div style={{display:"flex", alignItems:"center", flexDirection:"column", justifyContent:"center",width:"100%", height:"auto", background:"#FFF", padding:"50px"}}>
 
           
@@ -111,7 +131,7 @@ export default function Components(props) {
           <a href="" style={{display:"flex", alignItems:"center", marginBottom:"20px"}}><Phone></Phone>&nbsp;(312) 609-9970</a>
           </div>
           </div>
-          </GridItem>
+          </GridItem> */}
         </GridContainer>
       
         {/* <SectionBasics />

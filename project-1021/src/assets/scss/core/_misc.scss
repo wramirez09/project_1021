@@ -39,10 +39,20 @@ h6 {
 h1 {
   font-size: 3.3125rem;
   line-height: 1.15em;
+  @include bp("small"){
+    font-size: 2.3125rem;
+    line-height: 1.15em;
+    color: black;
+  }
 }
 h2 {
   font-size: 2.25rem;
   line-height: 1.5em;
+  @include bp("small"){
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    color: black;
+  }
 }
 h3 {
   font-size: 1.5625rem;
@@ -123,4 +133,28 @@ img {
 }
 form {
   margin-bottom: 1.125rem;
+}
+
+
+.hidden-small{
+  @include bp("small"){
+    display: none;
+  }
+}
+
+
+.desktop-vert-center{
+  @include bp("large"){
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.makeStyles-parallax-75 {
+  height: 38vh !important;
+  @include bp("large"){
+    height: 98vh !important;
+  }
 }
