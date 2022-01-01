@@ -15,30 +15,59 @@ import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import SectionBasics from "./Sections/SectionBasics.js";
-import SectionNavbars from "./Sections/SectionNavbars.js";
-import SectionTabs from "./Sections/SectionTabs.js";
-import SectionPills from "./Sections/SectionPills.js";
-import SectionNotifications from "./Sections/SectionNotifications.js";
-import SectionTypography from "./Sections/SectionTypography.js";
-import SectionJavascript from "./Sections/SectionJavascript.js";
-import SectionCarousel from "./Sections/SectionCarousel.js";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
-import SectionLogin from "./Sections/SectionLogin.js";
-import SectionExamples from "./Sections/SectionExamples.js";
-import SectionDownload from "./Sections/SectionDownload.js";
-
 import styles from "assets/jss/material-kit-react/views/components.js";
-import { grayColor } from "assets/jss/material-kit-react.js";
 import logo from './../../assets/img/logo.webp';
 import tshirt from './../../assets/img/tshirt.webp';
 import { Phone } from "@material-ui/icons";
 import video from "../../assets/video/master.mp4"
-
+import PicGallery from 'react-pic-gallery'
+import WorkSection from "views/LandingPage/Sections/WorkSection";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
+  const listOfImages = [
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },{
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },{
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },
+    {
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    },{
+      thumbnailSrc: 'https://picsum.photos/200/300?grayscale',
+      fullSrc: 'https://picsum.photos/200/300?grayscale'
+    }
+  ]
+  const options = {
+    customLoadComponent: () => <h3>Loading</h3>,
+    // hidePagination: false,
+    // externalLightbox: true,
+    rowHeight: '400px',
+    picsPerRow:3
+  }
   const { ...rest } = props;
   return (
     <div>
@@ -48,9 +77,9 @@ export default function Components(props) {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
+          height: 300,
           color: "white",
-          fontWeight:"boldq"
+          fontWeight:"bold"
         }}
         {...rest}
       />
@@ -84,7 +113,7 @@ export default function Components(props) {
       </GridItem>        
       <GridItem xs={12} md={6}>
         <div style={{padding:"50px"}}>
-          <h1>WHO WE ARE</h1>
+          <h1 className={classes.title}>WHO WE ARE</h1>
           <h2>ARTISTS AND ENTREPRENEURS</h2>
 
           <p>Located in the heart of Chicago, PROJECT 1021 is a Locally Owned Artist Incubator /Retail Shop in Pilsen that provides Proper Services for Artist and Small Businesses.  Founded During the 2020 Pandemic, By Local Artist Carlos Rodriguez (Charlie Glitch ) and Like minded entrepreneurs Camilo Rodriguez, Walter Rodriguez and Xavier Hernandez, a creative space and home for all artist was built.</p>
@@ -110,49 +139,16 @@ export default function Components(props) {
           </div>
         </div> 
       </GridItem> 
-
-          {/* <GridItem xs={12} style={{background:`url(${tshirt}) no-repeat`, backgroundSize:"contain", backgroundPosition:"center", height:"200px"}}>
-           */}
-          {/* <img style={{width:"100%", height:"auto"}} src={tshirt}></img> */}
-          {/* <div style={{position:"absolute", width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", color: "white"}}>
-            <p>Come Visit</h2>
-            <p style={{fontWeight:"800"}}>1021 W 18th St, Chicago, IL 60608</p>
-            <a href="#">Directions</a>
-          </div> */}
-          {/* </GridItem> */}
-          {/* <GridItem xs={12} md={6}>
-          <div style={{display:"flex", alignItems:"center", flexDirection:"column", justifyContent:"center",width:"100%", height:"auto", background:"#FFF", padding:"50px"}}>
-
-          
-          <h2>INSTORE HOURS</h2>
-          <p>Wednesday - Saturday :: 3pm - 9pm</p>
-          <p>Sunday-Tuesday :: Appointment Only</p>
-          <div>
-          <a href="" style={{display:"flex", alignItems:"center", marginBottom:"20px"}}><Phone></Phone>&nbsp;(312) 609-9970</a>
-          </div>
-          </div>
-          </GridItem> */}
-        </GridContainer>
+      <GridItem xs={12} style={{padding:"50px"}}>
+        <h1 className={classes.title} style={{textAlign:"center"}} >Events</h1>
+        <p>Lorem Ipsum</p>
+      <PicGallery imgList={listOfImages} options={options}/>
+      </GridItem>
+         <GridItem xs={12}>
+         <WorkSection></WorkSection>
+         </GridItem>
+      </GridContainer>
       
-        {/* <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
-            <Button color="primary" size="lg" simple>
-              View Login Page
-            </Button>
-          </Link>
-        </GridItem>
-        <SectionExamples />
-        <SectionDownload /> */}
       </div>
       <Footer />
     </div>

@@ -74,6 +74,10 @@ h6 {
 p {
   font-size: 14px;
   margin: 0 0 10px;
+  color: black;
+  @include bp("large"){
+    color: white;
+  }
 }
 html {
   font-family: sans-serif;
@@ -157,4 +161,20 @@ form {
   @include bp("large"){
     height: 98vh !important;
   }
+}
+
+.reactPic-innerImgDiv {
+  overflow: hidden;
+}
+
+.reactPic-grid {
+  height: 82% !important;
+}
+
+.makeStyles-grid-79 {
+  padding: 0 25px !important;
+}
+
+.makeStyles-section-80 {
+  padding: 0 !important;
 }

@@ -16,6 +16,7 @@ const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
   const classes = useStyles();
+
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
